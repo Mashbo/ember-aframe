@@ -60,6 +60,9 @@ module.exports = {
   },
 
   treeForAddon(tree) {
+    if (process.env.EMBER_CLI_FASTBOOT) {
+      return; 
+    }
     let trees = [tree];
 
     trees.push(writeFile('utils/attributes.js', `
@@ -105,6 +108,10 @@ module.exports = {
 
   treeForApp(tree) {
     tree = this._super.treeForApp.call(this, tree);
+    
+    if (process.env.EMBER_CLI_FASTBOOT) {
+      return tree; 
+    }
 
     let trees = [tree];
 
