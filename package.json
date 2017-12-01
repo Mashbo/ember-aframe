@@ -22,7 +22,7 @@
     "aframe": "^0.7.0",
     "broccoli-file-creator": "^1.1.1",
     "broccoli-merge-trees": "^2.0.0",
-    "ember-aframe-shim": "^1.0.0",
+    "ember-aframe-shim": "Mashbo/ember-aframe-shim#guard-against-fastboot",
     "ember-awesome-macros": "^0.40.0",
     "ember-cli-babel": "^6.3.0",
     "ember-cli-htmlbars": "^2.0.2",
