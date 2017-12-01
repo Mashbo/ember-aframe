@@ -52,7 +52,9 @@ module.exports = {
   name: 'ember-aframe',
 
   included() {
-    runAFrame();
+    if (!process.env.EMBER_CLI_FASTBOOT) {
+      runAFrame();
+    }
 
     return this._super.included.apply(this, arguments);
   },
